@@ -123,4 +123,10 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionCoba()
+    {
+        $this->layout = false;
+        return $this->render('about');
+    }
 }
