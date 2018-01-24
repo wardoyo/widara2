@@ -30,15 +30,15 @@
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
-                    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Blog', 'icon' => 'file-code-o', 'url' => ['/tb-blog']],
-                    ['label' => 'Jadwal', 'icon' => 'dashboard', 'url' => ['/tb-jadwal']],
-                    ['label' => 'Kategori', 'icon' => 'dashboard', 'url' => ['/tb-kategori']],
-                    ['label' => 'Pesan', 'icon' => 'dashboard', 'url' => ['/tb-pesan']],
-                    ['label' => 'Profile', 'icon' => 'dashboard', 'url' => ['/tb-profile']],
-                    ['label' => 'Program', 'icon' => 'dashboard', 'url' => ['/tb-program']],
-                    ['label' => 'Slide', 'icon' => 'dashboard', 'url' => ['/tb-slide']],
-                    ['label' => 'User', 'icon' => 'dashboard', 'url' => ['/tb-user']],
+                    ['label' => 'Menu', 'options' => ['class' => 'header']],
+                    ['label' => 'Blog', 'icon' => 'file-text', 'url' => ['/tb-blog']],
+                    ['label' => 'Jadwal', 'icon' => 'calendar', 'url' => ['/tb-jadwal']],
+                    ['label' => 'Kategori', 'icon' => 'list-alt', 'url' => ['/tb-kategori']],
+                    ['label' => 'Pesan', 'icon' => 'envelope-o', 'url' => ['/tb-pesan']],
+                    ['label' => 'Profile', 'icon' => 'users', 'url' => ['/tb-profile']],
+                    ['label' => 'Program', 'icon' => 'calendar-check-o', 'url' => ['/tb-program']],
+                    ['label' => 'Slide', 'icon' => 'sliders', 'url' => ['/tb-slide']],
+                    ['label' => 'User', 'icon' => 'user', 'url' => ['/tb-user']],
                     
                 ],
             ]
