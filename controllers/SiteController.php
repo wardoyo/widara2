@@ -127,6 +127,6 @@ class SiteController extends Controller
     public function actionCoba()
     {
         $this->layout = false;
-        return $this->render('about');
+        return $this->render('home');
     }
 }
