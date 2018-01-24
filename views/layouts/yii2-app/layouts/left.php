@@ -31,35 +31,15 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
-                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
-                    ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
-                    [
-                        'label' => 'Some tools',
-                        'icon' => 'share',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii'],],
-                            ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug'],],
-                            [
-                                'label' => 'Level One',
-                                'icon' => 'circle-o',
-                                'url' => '#',
-                                'items' => [
-                                    ['label' => 'Level Two', 'icon' => 'circle-o', 'url' => '#',],
-                                    [
-                                        'label' => 'Level Two',
-                                        'icon' => 'circle-o',
-                                        'url' => '#',
-                                        'items' => [
-                                            ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                                            ['label' => 'Level Three', 'icon' => 'circle-o', 'url' => '#',],
-                                        ],
-                                    ],
-                                ],
-                            ],
-                        ],
-                    ],
+                    ['label' => 'Blog', 'icon' => 'file-code-o', 'url' => ['/tb-blog']],
+                    ['label' => 'Jadwal', 'icon' => 'dashboard', 'url' => ['/tb-jadwal']],
+                    ['label' => 'Kategori', 'icon' => 'dashboard', 'url' => ['/tb-kategori']],
+                    ['label' => 'Pesan', 'icon' => 'dashboard', 'url' => ['/tb-pesan']],
+                    ['label' => 'Profile', 'icon' => 'dashboard', 'url' => ['/tb-profile']],
+                    ['label' => 'Program', 'icon' => 'dashboard', 'url' => ['/tb-program']],
+                    ['label' => 'Slide', 'icon' => 'dashboard', 'url' => ['/tb-slide']],
+                    ['label' => 'User', 'icon' => 'dashboard', 'url' => ['/tb-user']],
+                    
                 ],
             ]
         ) ?>
