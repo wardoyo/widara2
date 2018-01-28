@@ -1,3 +1,7 @@
+<?php
+use yii\helpers\Html;
+?>
+
 <!-- Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -17,11 +21,11 @@
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <img src="/asset/images/left.png" alt="left">
+                <?= Html::img('@web/img/left.png', ['alt'=>'left']);?>
                 <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <img src="/asset/images/right.png" alt="right">
+                <?= Html::img('@web/img/right.png', ['alt'=>'right']);?>
                 <span class="sr-only">Next</span>
             </a>
     </div>
@@ -45,7 +49,7 @@
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
                             <svg class="icon icon-check">
-                                <use xlink:href="/asset/fonts/icono.svg#check" />
+                                <use xlink:href="../views/site/icons/icono.svg#check" />
                             </svg>
                         </div>
                         <div class="p-2 align-self-center">Big Time Pay-off</div>
@@ -53,7 +57,7 @@
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
                             <svg class="icon icon-check">
-                                <use xlink:href="/asset/fonts/icono.svg#check" />
+                                <use xlink:href="../views/site/icons/icono.svg#check" />
                             </svg>
                         </div>
                         <div class="p-2 align-self-center">Active</div>
@@ -61,7 +65,7 @@
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
                             <svg class="icon icon-check">
-                                <use xlink:href="/asset/fonts/icono.svg#check" />
+                                <use xlink:href="../views/site/icons/icono.svg#check" />
                             </svg>
                         </div>
                         <div class="p-2 align-self-center">Skillfull</div>
@@ -69,7 +73,7 @@
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
                             <svg class="icon icon-check">
-                                <use xlink:href="/asset/fonts/icono.svg#check" />
+                                <use xlink:href="../views/site/icons/icono.svg#check" />
                             </svg>
                         </div>
                         <div class="p-2 align-self-center">Productive</div>
@@ -77,7 +81,7 @@
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
                             <svg class="icon icon-check">
-                                <use xlink:href="/asset/fonts/icono.svg#check" />
+                                <use xlink:href="../views/site/icons/icono.svg#check" />
                             </svg>
                         </div>
                         <div class="p-2 align-self-center">Profitable</div>
@@ -85,7 +89,7 @@
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
                             <svg class="icon icon-check">
-                                <use xlink:href="/asset/fonts/icono.svg#check" />
+                                <use xlink:href="../views/site/icons/icono.svg#check" />
                             </svg>
                         </div>
                         <div class="p-2 align-self-center">Hit The Target</div>
@@ -111,7 +115,7 @@
                                 </footer>
                             </div>
                             <div class="p-2 align-self-center">
-                                <img class="img-fluid rounded-circle" src="/asset/images/ceo.jpg" alt="" width="64" height="64">
+                                <?= Html::img('@web/img/ceo.jpg', ['alt'=>'', 'width'=>'64', 'height'=>'64', 'class'=>'img-fluid rounded-circle']);?>
                             </div>
                         </div>
                 </div>
@@ -152,7 +156,7 @@
                     <div class="d-flex flex-column">
                         <div class="p-2">
                             <svg class="icon icon-canvas">
-                                <use xlink:href="/asset/fonts/wicon.svg#team" />
+                                <use xlink:href="../views/site/icons/wicon.svg#team" />
                             </svg>
                         </div>
                         <div class="p-2"><h4>Training Program</h4></div>
@@ -163,7 +167,7 @@
                     <div class="d-flex flex-column">
                         <div class="p-2">
                             <svg class="icon icon-canvas">
-                                <use xlink:href="/asset/fonts/wicon.svg#teamwork" />
+                                <use xlink:href="../views/site/icons/wicon.svg#teamwork" />
                             </svg>
                         </div>
                         <div class="p-2"><h4>Gathering</h4></div>
@@ -174,7 +178,7 @@
                     <div class="d-flex flex-column">
                         <div class="p-2">
                             <svg class="icon icon-canvas">
-                                <use xlink:href="/asset/fonts/wicon.svg#worldwide" />
+                                <use xlink:href='../views/site/icons/wicon.svg#worldwide' />
                             </svg>
                         </div>
                         <div class="p-2"><h4>Pension Program</h4></div>

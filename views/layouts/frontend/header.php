@@ -5,28 +5,18 @@
 
 use app\widgets\Alert;
 use yii\helpers\Html;
-// use app\assets\AppAsset;
+use app\assets\AppAsset;
 
-// AppAsset::register($this);
+AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
-    <!-- <meta charset="<?= Yii::$app->charset ?>">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title> -->
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Widara, Belajar Benar</title>
-    <link rel="icon" type="image/png" href="/asset/images/favicon.png" sizes="32x32">
-    <!--build:css css/styles.min.css-->
-    <link rel="stylesheet" type="text/css" href="/asset/css/bootstrap.css" media="none" onload="this.media='all';">
-    <link rel="stylesheet" type="text/css" href="/asset/css/style.css" media="none" onload="this.media='all';">
-    <link rel="stylesheet" type="text/css" href="/asset/font-awesome/css/font-awesome.min.css" media="none" onload="this.media='all';">
-    <!--endbuild-->
+    <link rel="icon" type="image/png" href="../views/uploads/images/favicon.png" sizes="32x32">
 
     <?php $this->head() ?>
 </head>
@@ -36,7 +26,7 @@ use yii\helpers\Html;
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light" id="header">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="/asset/images/widara.png" class="d-inline-block align-top" alt="">
+            <img src="../views/uploads/images/widara.png" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -72,10 +62,9 @@ use yii\helpers\Html;
     </div>
 </nav>
 
-    <div class="container">
-        
+  
         <?= $content ?>
-    </div>
+   
 
 <footer>
         <div class="footer-top">

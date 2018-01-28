@@ -59,10 +59,12 @@ class SiteController extends Controller
      *
      * @return string
      */
+
     public function actionIndex()
     {
         // return $this->render('index');
         $this->layout = false;
+        $this->layout = 'frontend/header';
         return $this->render('home');
     }
 
