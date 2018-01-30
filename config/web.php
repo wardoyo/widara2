@@ -45,14 +45,14 @@ $config = [
 
         //tema
 
-            'view' => [
+        'view' => [
          'theme' => [
              'pathMap' => [
                 '@app/views' => '@app/views/layouts/yii2-app'
-             ],
-         ],
-    ],
-
+                ],
+            ],
+        ],
+        
         //akhir tema
         'db' => $db,
         /*
@@ -63,6 +63,13 @@ $config = [
             ],
         ],
         */
+    ],
+
+    'modules' => [
+             /* other modules */
+         'markdown' => [
+             'class' => 'kartik\markdown\Module',
+                 ]
     ],
     'params' => $params,
 ];
