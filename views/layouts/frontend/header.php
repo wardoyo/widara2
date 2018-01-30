@@ -17,6 +17,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Widara, Belajar Benar</title>
     <link rel="icon" type="image/png" href="../views/uploads/images/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../web/css/bootstrap.css" media="none" onload="this.media='all';">
 
     <?php $this->head() ?>
 </head>

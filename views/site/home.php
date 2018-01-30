@@ -48,49 +48,37 @@ use yii\helpers\Html;
                     <h4>Program Benefits</h4>
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
-                            <svg class="icon icon-check">
-                                <use xlink:href="../views/site/icons/icono.svg#check" />
-                            </svg>
+                            <i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i>
                         </div>
                         <div class="p-2 align-self-center">Big Time Pay-off</div>
                     </div>
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
-                            <svg class="icon icon-check">
-                                <use xlink:href="../views/site/icons/icono.svg#check" />
-                            </svg>
+                            <i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i>
                         </div>
                         <div class="p-2 align-self-center">Active</div>
                     </div>
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
-                            <svg class="icon icon-check">
-                                <use xlink:href="../views/site/icons/icono.svg#check" />
-                            </svg>
+                            <i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i>
                         </div>
                         <div class="p-2 align-self-center">Skillfull</div>
                     </div>
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
-                            <svg class="icon icon-check">
-                                <use xlink:href="../views/site/icons/icono.svg#check" />
-                            </svg>
+                            <i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i>
                         </div>
                         <div class="p-2 align-self-center">Productive</div>
                     </div>
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
-                            <svg class="icon icon-check">
-                                <use xlink:href="../views/site/icons/icono.svg#check" />
-                            </svg>
+                            <i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i>
                         </div>
                         <div class="p-2 align-self-center">Profitable</div>
                     </div>
                     <div class="d-flex flex-row">
                         <div class="p-2 align-self-center">
-                            <svg class="icon icon-check">
-                                <use xlink:href="../views/site/icons/icono.svg#check" />
-                            </svg>
+                            <i class="fa fa-plus-square-o fa-lg" aria-hidden="true"></i>
                         </div>
                         <div class="p-2 align-self-center">Hit The Target</div>
                     </div>
