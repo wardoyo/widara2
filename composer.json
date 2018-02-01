@@ -19,9 +19,9 @@
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "dmstr/yii2-adminlte-asset": "^2.1",
-        "michelf/php-smartypants": "dev-lib",
-        "kartik-v/yii2-markdown": "dev-master",
-        "kartik-v/yii2-widget-fileinput": "@dev"
+        "2amigos/yii2-ckeditor-widget" : "~2.1",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "2amigos/yii2-tinymce-widget" : "~1.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
