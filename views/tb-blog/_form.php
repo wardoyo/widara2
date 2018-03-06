@@ -31,7 +31,7 @@ use kartik\file\FileInput;
 
     <!-- <?= $form->field($model, 'gambar_blog')->textInput(['maxlength' => true]) ?> -->
 
-    <?= $form->field($model, 'gambar_blog[]')->widget(FileInput::classname(), [
+    <?= $form->field($model, 'gambar_blog')->widget(FileInput::classname(), [
     'options' => ['multiple' => true, 'accept' => 'image/*'],
     'pluginOptions' => ['previewFileType' => 'image']
 ]);?>

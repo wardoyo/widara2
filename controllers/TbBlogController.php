@@ -8,6 +8,7 @@ use app\models\TbBlogSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * TbBlogController implements the CRUD actions for TbBlog model.
@@ -66,8 +67,18 @@ class TbBlogController extends Controller
     {
         $model = new TbBlog();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_blog]);
+        if ($model->load(Yii::$app->request->post())) {
+
+            $image = UploadedFile::getInstance($model, 'gambar_blog');
+
+            $model->gambar_blog = $image->baseName.'.'.$image->extension;
+
+            if($model->save()){
+
+                $image->saveAs('uploads/'.$model->gambar_blog);
+
+                return $this->redirect(['view', 'id' => $model->id_blog]);
+            }
         }
 
         return $this->render('create', [
