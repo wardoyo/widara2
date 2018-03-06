@@ -31,7 +31,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_blog',
             'judul',
             'isi:ntext',
-            'gambar_blog',
+            [
+                'attribute' => 'gambar_blog',
+                'value' => 'uploads/'.$model->gambar_blog,
+                'format' => ['image', ['width' => '100', 'height' => '100']],
+            ]
         ],
     ]) ?>
 
