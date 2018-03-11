@@ -25,11 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_jadwal',
             'tanggal',
             'judul',
             'detail:ntext',
-            'id_kategori',
+            [
+                'value' => 'kategori.kategori',
+                'label' => 'kategori'
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

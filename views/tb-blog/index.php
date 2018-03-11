@@ -24,11 +24,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id_blog',
             'judul',
             'isi:ntext',
-            'gambar_blog',
+            [
+                'attribute'=> 'gambar_blog',
+                'format'=> ['image', ['width' => '100', 'height' => '100']],
+                'value'=> function($model){
+                    return ($model->gambar_blog) ? 'uploads/'.$model->gambar_blog : false;
+                }
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

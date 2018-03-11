@@ -97,8 +97,18 @@ class TbBlogController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_blog]);
+        if ($model->load(Yii::$app->request->post())) {
+
+            $image = UploadedFile::getInstance($model, 'gambar_blog');
+
+            if(!empty($image)){
+            $model->gambar_blog = $image->baseName.'.'.$image->extension;
+            $image->saveAs('uploads/'.$model->gambar_blog);
+            }
+
+            if($model->save()){
+                return $this->redirect(['view', 'id' => $model->id_blog]);
+            }
         }
 
         return $this->render('update', [

@@ -29,11 +29,17 @@ use kartik\file\FileInput;
 	    ]
 	]);?>
 
-    <!-- <?= $form->field($model, 'gambar_blog')->textInput(['maxlength' => true]) ?> -->
-
     <?= $form->field($model, 'gambar_blog')->widget(FileInput::classname(), [
     'options' => ['multiple' => true, 'accept' => 'image/*'],
-    'pluginOptions' => ['previewFileType' => 'image']
+    'pluginOptions' => ['previewFileType' => 'image', 
+                        'showUpload' => true,
+                        'initialPreview' => [
+                            $model->gambar_blog ? Html::img('uploads/'.$model->gambar_blog, ['style'=>'width: 200px; height:200px']) : null, // checks the models to display the preview
+
+                        ],
+                        'initialCaption'=>$model->gambar_blog,
+                        'overwriteInitial' => false,
+                      ]
 ]);?>
 
     <div class="form-group">

@@ -8,6 +8,7 @@ use app\models\TbSlideSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * TbSlideController implements the CRUD actions for TbSlide model.
@@ -66,8 +67,18 @@ class TbSlideController extends Controller
     {
         $model = new TbSlide();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_slide]);
+        if ($model->load(Yii::$app->request->post())) {
+
+            $image = UploadedFile::getInstance($model, 'gambar_slide');
+
+            $model->gambar_slide = $image->baseName.'.'.$image->extension;
+
+            if($model->save()){
+
+                $image->saveAs('slides/'.$model->gambar_slide);
+
+                return $this->redirect(['view', 'id' => $model->id_slide]);
+            }
         }
 
         return $this->render('create', [
@@ -86,8 +97,17 @@ class TbSlideController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_slide]);
+        if ($model->load(Yii::$app->request->post())) {
+            $image = UploadedFile::getInstance($model, 'gambar_slide');
+
+            if(!empty($image)){
+            $model->gambar_slide = $image->baseName.'.'.$image->extension;
+            $image->saveAs('slides/'.$model->gambar_slide);
+            }
+
+            if($model->save()){
+                return $this->redirect(['view', 'id' => $model->id_slide]);
+            }
         }
 
         return $this->render('update', [

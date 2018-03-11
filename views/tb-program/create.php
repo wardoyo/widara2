@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\TbProgram */
 
-$this->title = 'Create Tb Program';
-$this->params['breadcrumbs'][] = ['label' => 'Tb Programs', 'url' => ['index']];
+$this->title = 'Create Program';
+$this->params['breadcrumbs'][] = ['label' => 'Programs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tb-program-create">

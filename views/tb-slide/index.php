@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\TbSlideSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tb Slides';
+$this->title = 'Slides';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tb-slide-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tb Slide', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Slide', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,8 +25,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_slide',
-            'gambar_slide',
+            [
+                'attribute'=> 'gambar_slide',
+                'format'=> ['image', ['width' => '100', 'height' => '100']],
+                'value'=> function($model){
+                    return ($model->gambar_slide) ? 'slides/'.$model->gambar_slide : false;
+                }
+            ],
             'prioritas',
 
             ['class' => 'yii\grid\ActionColumn'],

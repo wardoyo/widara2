@@ -8,6 +8,7 @@ use app\models\TbProgramSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * TbProgramController implements the CRUD actions for TbProgram model.
@@ -66,8 +67,18 @@ class TbProgramController extends Controller
     {
         $model = new TbProgram();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_program]);
+        if ($model->load(Yii::$app->request->post())) {
+
+            $image = UploadedFile::getInstance($model, 'gambar_program');
+
+            $model->gambar_program = $image->baseName.'.'.$image->extension;
+
+            if($model->save()){
+
+                $image->saveAs('uploads/'.$model->gambar_program);
+
+                return $this->redirect(['view', 'id' => $model->id_program]);
+            }
         }
 
         return $this->render('create', [
@@ -86,8 +97,19 @@ class TbProgramController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id_program]);
+        if ($model->load(Yii::$app->request->post())) {
+            
+            $image = UploadedFile::getInstance($model, 'gambar_program');
+
+            if(!empty($image)){
+            $model->gambar_program = $image->baseName.'.'.$image->extension;
+            $image->saveAs('uploads/'.$model->gambar_program);
+            }
+
+            if($model->save()){
+
+                return $this->redirect(['view', 'id' => $model->id_program]);
+            }
         }
 
         return $this->render('update', [

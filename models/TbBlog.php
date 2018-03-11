@@ -28,10 +28,11 @@ class TbBlog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['judul', 'isi', 'gambar_blog'], 'required'],
+            [['judul', 'isi'], 'required'],
+            [['gambar_blog'], 'required', 'on'=> 'create'],
             [['isi'], 'string'],
             [['judul'], 'string', 'max' => 100],
-            [['gambar_blog'], 'string', 'max' => 500],
+            [['gambar_blog'], 'string', 'max' => 500,],
         ];
     }
 

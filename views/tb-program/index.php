@@ -7,16 +7,15 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\TbProgramSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Tb Programs';
+$this->title = 'Programs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tb-program-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Tb Program', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Program', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -25,10 +24,15 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id_program',
             'nama_program',
             'detail:ntext',
-            'gambar_program',
+            [
+                'attribute'=> 'gambar_program',
+                'format'=> ['image', ['width' => '100', 'height' => '100']],
+                'value'=> function($model){
+                    return ($model->gambar_program) ? 'uploads/'.$model->gambar_program : false;
+                }
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

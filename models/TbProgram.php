@@ -28,7 +28,8 @@ class TbProgram extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nama_program', 'detail', 'gambar_program'], 'required'],
+            [['nama_program', 'detail'], 'required'],
+            [['gambar_program'], 'required', 'on'=> 'create'],
             [['detail'], 'string'],
             [['nama_program'], 'string', 'max' => 100],
             [['gambar_program'], 'string', 'max' => 500],
