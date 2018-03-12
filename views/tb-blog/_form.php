@@ -1,10 +1,8 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\tinymce\TinyMce;
 use kartik\file\FileInput;
-
 /* @var $this yii\web\View */
 /* @var $model app\models\TbBlog */
 /* @var $form yii\widgets\ActiveForm */
@@ -35,7 +33,6 @@ use kartik\file\FileInput;
                         'showUpload' => true,
                         'initialPreview' => [
                             $model->gambar_blog ? Html::img('uploads/'.$model->gambar_blog, ['style'=>'width: 200px; height:200px']) : null, // checks the models to display the preview
-
                         ],
                         'initialCaption'=>$model->gambar_blog,
                         'overwriteInitial' => false,
